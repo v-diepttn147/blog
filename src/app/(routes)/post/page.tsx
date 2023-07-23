@@ -1,4 +1,4 @@
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts } from "@/app/_lib/posts";
 
 async function getPost() {
   return getAllPosts();

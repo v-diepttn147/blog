@@ -10,7 +10,7 @@ const NAV_ITEMS: INavItem[] = [
   {
     id: 1,
     label: "Blog",
-    value: "/posts",
+    value: "/blog",
   },
   {
     id: 2,
