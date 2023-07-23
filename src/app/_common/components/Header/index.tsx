@@ -9,21 +9,31 @@ export interface INavItem {
 const NAV_ITEMS: INavItem[] = [
   {
     id: 1,
-    label: "Post",
+    label: "Blog",
     value: "/posts",
   },
   {
     id: 2,
-    label: "About",
-    value: "/about",
+    label: "Projects",
+    value: "/projects",
+  },
+  {
+    id: 3,
+    label: "Resume",
+    value: "/resume",
   },
 ];
 
 export default function Header() {
   return (
     <header className="flex justify-between items-start pb-8">
-      <Link href="/" className="text-2xl font-semibold border-b-4 border-black">Nhan Luong</Link>
-      <ul className="flex gap-x-2 text-secondary">
+      <Link
+        href="/"
+        className="text-2xl font-semibold border-b-4 border-black pb-2"
+      >
+        Nhan Luong
+      </Link>
+      <ul className="flex gap-x-2 text-zinc-500 card">
         {NAV_ITEMS.map((item) => (
           <li key={item.id}>
             <Link href={item.value} className="">
