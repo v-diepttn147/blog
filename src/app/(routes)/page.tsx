@@ -6,16 +6,13 @@ const SOCIALS = {
   linkedin: "https://www.linkedin.com/in/nhanlt18/",
 };
 
+const INTRO =
+  "Hi, I'm a Front-End Software Engineer. Interested in building applications, design systems, and open-source projects.";
+
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between">
-      <p className="text-zinc-600 mb-5">
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-        enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-        exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
-        nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-        minim nulla est proident.
-      </p>
+    <main className="flex flex-col justify-between">
+      <p className="text-zinc-600 mb-5 text-start">{INTRO}</p>
       <div className="w-full">
         <div className="flex gap-x-5">
           <SocialCard

@@ -33,7 +33,7 @@ export default function Header() {
       >
         Nhan Luong
       </Link>
-      <ul className="flex gap-x-2 text-zinc-500 card">
+      <ul className="flex gap-x-2 text-zinc-500">
         {NAV_ITEMS.map((item) => (
           <li key={item.id}>
             <Link href={item.value} className="">

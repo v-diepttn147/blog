@@ -12,7 +12,7 @@ export default function SocialCard(props: ICardProps) {
   const { title, desc, icon, href = "#" } = props;
 
   return (
-    <div className="group border border-zinc-200 hover:shadow-lg transition flex justify-between items-center p-5 rounded-3xl w-full">
+    <div className="card group flex justify-between items-center">
       <div className="flex items-center">
         <div className="pr-2 group-hover:scale-110 transition-transform">
           {icon}
