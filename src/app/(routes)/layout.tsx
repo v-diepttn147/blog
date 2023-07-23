@@ -1,4 +1,5 @@
 import { Header } from "../_common/components";
+import Footer from "../_common/components/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body className="container mx-auto py-12 sm:px-12 md:px-16 bg-white min-h-screen">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
