@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import { SocialCard } from "../_common/components";
 
 const SOCIALS = {
