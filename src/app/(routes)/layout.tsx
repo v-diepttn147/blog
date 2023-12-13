@@ -21,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`bg-zinc-50 ${roboto.className}}`}>
-      <body className="container mx-auto py-12 sm:px-12 md:px-16 bg-white min-h-screen">
+      <body className="container mx-auto py-12 sm:px-12 md:px-16 min-h-screen">
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

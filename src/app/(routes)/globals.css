@@ -6,4 +6,12 @@
   .card {
     @apply border border-zinc-200 hover:shadow-lg transition p-5 rounded-3xl w-full;
   }
+
+  .button-primary {
+    @apply bg-zinc-500 hover:bg-zinc-600 text-white font-bold py-2 px-4 rounded;
+  }
+
+  .button-secondary {
+    @apply bg-zinc-200 hover:bg-zinc-300 text-zinc-700 font-bold py-2 px-4 rounded;
+  }
 }
