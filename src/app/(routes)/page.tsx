@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { SocialCard } from "../_common/components";
 import Image from "next/image";
+import Link from "next/link";
 
 const SOCIALS = {
   github: "https://github.com/nhanluongoe",
@@ -18,8 +19,12 @@ export default function Home() {
 
       <section className="mb-5 flex">
         <div className="flex flex-col justify-center flex-1">
-          <p className="text-2xl">Build things from small.</p>
-          <button className="button-primary w-[200px] my-5">Read blogs</button>
+          <p className="text-5xl">Build things from small.</p>
+          <Link href="/blog" className="w-fit">
+            <button className="button-primary w-[200px] my-5">
+              Read blogs
+            </button>
+          </Link>
         </div>
         <div className="flex-1">
           <Image src="" alt="hero image" width="300" height="300"></Image>

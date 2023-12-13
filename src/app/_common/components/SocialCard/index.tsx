@@ -22,8 +22,10 @@ export default function SocialCard(props: ICardProps) {
           <p className="text-sm text-zinc-500">{desc}</p>
         </div>
       </div>
-      <button className="border border-zinc-200 rounded-xl px-3 py-1">
-        <Link href={href} target="_blank">Visit</Link>
+      <button className="button-secondary">
+        <Link href={href} target="_blank">
+          Visit
+        </Link>
       </button>
     </div>
   );
