@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-import { SocialCard } from "../_common/components";
+import { MagneticPoints, SocialCard } from "../_common/components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,14 +9,9 @@ const SOCIALS = {
   linkedin: "https://www.linkedin.com/in/nhanlt18/",
 };
 
-// const INTRO =
-//   "Hi, I'm a Front-End Software Engineer. Interested in building applications, design systems, and open-source projects.";
-
 export default function Home() {
   return (
     <div className="flex flex-col justify-between">
-      {/* <p className="text-zinc-600 mb-5 text-start">{INTRO}</p> */}
-
       <section className="mb-5 flex">
         <div className="flex flex-col justify-center flex-1">
           <p className="text-5xl">Build things from small.</p>
@@ -26,12 +21,15 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="flex-1">
-          <Image src="" alt="hero image" width="300" height="300"></Image>
+        <div className="flex-1 grid place-content-center relative w-fit h-fit">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image src="" alt="hero image" width="250" height="250"></Image>
+          </div>
+          <MagneticPoints width={15} height={15} />
         </div>
       </section>
 
-      <section className="w-full">
+      <section className="w-full my-5">
         <div className="flex gap-x-5">
           <SocialCard
             title="Github"
