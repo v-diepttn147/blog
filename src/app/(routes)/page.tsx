@@ -24,10 +24,10 @@ export default function Home() {
         <div className="flex-1 grid place-content-center relative w-fit h-fit">
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
-              src="/img/bw-avatar.png"
+              src="/img/avatar.png"
               alt="hero image"
-              width={350}
-              height={350}
+              width={300}
+              height={300}
               className="border border-white border-opacity-50 rounded-full z-10"
             />
           </div>
