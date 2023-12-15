@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-import { MagneticPoints, SocialCard } from "../_common/components";
+import { HeroImage, MagneticPoints, SocialCard } from "../_common/components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,15 +23,9 @@ export default function Home() {
         </div>
         <div className="flex-1 grid place-content-center relative w-fit h-fit">
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image
-              src="/img/avatar.png"
-              alt="hero image"
-              width={300}
-              height={300}
-              className="border border-white border-opacity-50 rounded-full z-10"
-            />
+            <HeroImage />
           </div>
-          <MagneticPoints width={15} height={15} />
+          <MagneticPoints width={20} height={15} />
         </div>
       </section>
 
