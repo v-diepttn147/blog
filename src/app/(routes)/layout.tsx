@@ -1,4 +1,4 @@
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
 import { Header } from "../_common/components";
 import Footer from "../_common/components/Footer";
