@@ -22,10 +22,6 @@ export default function MagneticPoints(props: IMagneticPointsProps) {
     }, 3 * 1000);
   }, [height, width]);
 
-  function handleMouseEnter() {
-    console.log("hover");
-  }
-
   return (
     <div className="flex justify-center items-center gap-5">
       {Array.from({ length: width }).map((_, rowIdx) => (
@@ -36,7 +32,6 @@ export default function MagneticPoints(props: IMagneticPointsProps) {
               className={`w-1 h-1 bg-zinc-500 rounded-full ${
                 onPoints.includes(rowIdx * colIdx) ? "animate-flash" : ""
               }`}
-              onMouseEnter={handleMouseEnter}
             ></div>
           ))}
         </div>
