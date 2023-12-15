@@ -27,7 +27,7 @@ const NAV_ITEMS: INavItem[] = [
 export default function Header() {
   return (
     <header className="flex justify-between items-start pb-8">
-      <Link href="/" className="text-2xl font-semibold pb-2">
+      <Link href="/" className="text-2xl font-semibold pb-2 text-zinc-700">
         Nhan Luong
       </Link>
       <ul className="flex gap-x-2 text-zinc-500">
