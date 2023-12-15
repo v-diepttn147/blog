@@ -23,7 +23,13 @@ export default function Home() {
         </div>
         <div className="flex-1 grid place-content-center relative w-fit h-fit">
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src="" alt="hero image" width="250" height="250"></Image>
+            <Image
+              src="/img/bw-avatar.png"
+              alt="hero image"
+              width={350}
+              height={350}
+              className="border border-white border-opacity-50 rounded-full z-10"
+            />
           </div>
           <MagneticPoints width={15} height={15} />
         </div>
