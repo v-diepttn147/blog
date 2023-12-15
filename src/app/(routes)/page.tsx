@@ -14,7 +14,7 @@ export default function Home() {
     <div className="flex flex-col justify-between">
       <section className="mb-5 flex">
         <div className="flex flex-col justify-center flex-1">
-          <p className="text-5xl">Build things from small.</p>
+          <p className="text-5xl">Build things from small pieces.</p>
           <Link href="/blog" className="w-fit">
             <button className="button-primary w-[200px] my-5">
               Read blogs
