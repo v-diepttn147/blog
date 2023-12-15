@@ -51,7 +51,7 @@ function HeroImage() {
       alt="hero image"
       width={300}
       height={300}
-      className={`border border-white border-opacity-50 rounded-full z-10`}
+      className={`border border-white border-opacity-50 rounded-full z-10 transition-all`}
     />
   );
 }
