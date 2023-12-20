@@ -1,5 +1,3 @@
-import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
@@ -13,12 +11,12 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase your projects with a hero image (16 x 9)
+            These are some of the projects I've worked on.
           </p>
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
+            {/* {projectsData.map((d) => (
               <Card
                 key={d.title}
                 title={d.title}
@@ -26,7 +24,7 @@ export default function Projects() {
                 imgSrc={d.imgSrc}
                 href={d.href}
               />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
