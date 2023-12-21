@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Nhan Luong',
   author: 'Nhan Luong',
   headerTitle: 'Nhan Luong',
-  description: 'Build things from small pieces',
+  description: 'Just build it',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://nhanluongoe.me',
