@@ -65,6 +65,10 @@ module.exports = {
           },
         },
       }),
+      boxShadow: ({ theme }) => ({
+        primary: `5px 5px 0px 0px ${theme('colors.primary.500')}`,
+        gray: `5px 5px 0px 0px ${theme('colors.gray.600')}`,
+      }),
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
