@@ -15,7 +15,7 @@ export default function PostCard(props: PostProps) {
   return (
     <Link
       href={`/blog/${slug}`}
-      className="relative block w-full max-w-[544px] cursor-pointer bg-white p-6 shadow-gray transition-all duration-200 ease-in-out hover:-translate-x-2 hover:bg-white hover:shadow-primary dark:bg-secondary-500"
+      className="relative block w-full max-w-[544px] cursor-pointer bg-gray-200 p-6 shadow-secondary transition-all duration-200 ease-in-out hover:-translate-x-2 hover:shadow-primary dark:bg-secondary-500 dark:shadow-gray"
     >
       <div className="absolute flex gap-5">
         {Array.from({ length: 3 }).map((_, i) => (

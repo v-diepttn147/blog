@@ -67,6 +67,7 @@ module.exports = {
       }),
       boxShadow: ({ theme }) => ({
         primary: `5px 5px 0px 0px ${theme('colors.primary.500')}`,
+        secondary: `5px 5px 0px 0px ${theme('colors.secondary.500')}`,
         gray: `5px 5px 0px 0px ${theme('colors.gray.600')}`,
       }),
     },
