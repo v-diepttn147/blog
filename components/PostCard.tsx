@@ -15,7 +15,7 @@ export default function PostCard(props: PostProps) {
   return (
     <Link
       href={`/blog/${slug}`}
-      className="relative block w-full max-w-[544px] cursor-pointer bg-gray-200 p-6 shadow-secondary transition-all duration-200 ease-in-out hover:-translate-x-2 hover:shadow-primary dark:bg-secondary-500 dark:shadow-gray"
+      className="relative block w-full max-w-[544px] cursor-pointer border border-secondary-500 bg-white p-6 shadow-secondary transition-all duration-200 ease-in-out hover:-translate-x-2 hover:border-primary-500 hover:shadow-primary dark:border-white dark:bg-gray-950 dark:shadow-white hover:dark:border-primary-500 hover:dark:shadow-primary"
     >
       <div className="absolute flex gap-5">
         {Array.from({ length: 3 }).map((_, i) => (
@@ -35,9 +35,9 @@ export default function PostCard(props: PostProps) {
       </div>
 
       <div className="absolute -right-[17px] bottom-[2px] flex -rotate-45 flex-col items-center justify-center gap-3">
-        <div className="h-[2px] w-[70px] bg-secondary-500 dark:bg-gray-500"></div>
-        <div className="h-[2px] w-[50px] bg-secondary-500 dark:bg-gray-500"></div>
-        <div className="h-[2px] w-[15px] bg-secondary-500 dark:bg-gray-500"></div>
+        <div className="h-[1px] w-[70px] bg-secondary-500 dark:bg-gray-500"></div>
+        <div className="h-[1px] w-[50px] bg-secondary-500 dark:bg-gray-500"></div>
+        <div className="h-[1px] w-[15px] bg-secondary-500 dark:bg-gray-500"></div>
       </div>
     </Link>
   )
