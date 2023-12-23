@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 'use client'
 
 import { usePathname } from 'next/navigation'
@@ -84,7 +83,7 @@ export default function ListLayoutWithTags({
           </h1>
         </div>
         <div className="flex sm:space-x-24">
-          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex">
+          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto border border-secondary-500 bg-transparent pt-5 dark:border-white sm:flex">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
                 <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
@@ -126,22 +125,24 @@ export default function ListLayoutWithTags({
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-secondary-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                        </dd>
-                      </dl>
                       <div className="space-y-3">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                        <div className="flex justify-between">
+                          <div>
+                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                              <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                                {title}
+                              </Link>
+                            </h2>
+                            <div className="flex flex-wrap">
+                              {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                            </div>
                           </div>
+                          <dl>
+                            <dt className="sr-only">Published on</dt>
+                            <dd className="text-base font-medium leading-6 text-secondary-500 dark:text-gray-400">
+                              <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                            </dd>
+                          </dl>
                         </div>
                         <div className="prose max-w-none text-secondary-500 dark:text-gray-400">
                           {summary}
