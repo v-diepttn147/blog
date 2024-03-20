@@ -1,7 +1,7 @@
 'use client'
 
-import Button from '@/components/Button'
-import { Code } from '@/components/Code'
+import Button from '@/components/button'
+import { Code } from '@/components/code'
 import React from 'react'
 import toast from 'react-stacked-toast'
 
