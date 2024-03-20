@@ -3,7 +3,7 @@ import Post from '@/interfaces/Post'
 import Link from 'next/link'
 import { formatDate } from 'pliny/utils/formatDate'
 import React from 'react'
-import Tag from './Tag'
+import Tag from './tag'
 interface PostProps {
   post: Post
 }

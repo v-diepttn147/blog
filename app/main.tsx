@@ -1,5 +1,5 @@
-import HeroSection from '@/components/HeroSection'
-import PostSection from '@/components/PostSection'
+import HeroSection from '@/components/hero-section'
+import PostSection from '@/components/post-section'
 import siteMetadata from '@/data/siteMetadata'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 

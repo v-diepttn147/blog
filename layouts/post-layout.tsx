@@ -1,14 +1,14 @@
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog, Authors } from 'contentlayer/generated'
-import Comments from '@/components/Comments'
-import Link from '@/components/Link'
-import PageTitle from '@/components/PageTitle'
-import SectionContainer from '@/components/SectionContainer'
-import Image from '@/components/Image'
-import Tag from '@/components/Tag'
+import Comments from '@/components/comments'
+import Link from '@/components/link'
+import PageTitle from '@/components/page-title'
+import SectionContainer from '@/components/section-container'
+import Image from '@/components/image'
+import Tag from '@/components/tag'
 import siteMetadata from '@/data/siteMetadata'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import ScrollTopAndComment from '@/components/scroll-top-and-comment'
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',

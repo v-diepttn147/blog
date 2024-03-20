@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
-import Button from './Button'
-import HeroImage from './HeroImage'
-import GlitchText from './GlitchText'
+import Button from './button'
+import HeroImage from './hero-image'
+import GlitchText from './glitch-text'
 
 export default function HeroSection() {
   return (

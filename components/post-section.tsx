@@ -1,6 +1,6 @@
 import Post from '@/interfaces/Post'
 import Link from 'next/link'
-import PostCard from './PostCard'
+import PostCard from './post-card'
 
 const MAX_DISPLAY = 5
 

@@ -1,5 +1,5 @@
 import Button from '@/components/Button'
-import Tag from '@/components/Tag'
+import Tag from '@/components/tag'
 import Link from 'next/link'
 import React from 'react'
 

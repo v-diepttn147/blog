@@ -4,10 +4,10 @@ import headerNavLinks from '@/data/headerNavLinks'
 import siteMetadata from '@/data/siteMetadata'
 import clsx from 'classnames'
 import { usePathname } from 'next/navigation'
-import Link from './Link'
-import MobileNav from './MobileNav'
-import SearchButton from './SearchButton'
-import ThemeSwitch from './ThemeSwitch'
+import Link from './link'
+import MobileNav from './mobile-nav'
+import SearchButton from './search-button'
+import ThemeSwitch from './theme-switch'
 
 const Header = () => {
   const pathName = usePathname()
