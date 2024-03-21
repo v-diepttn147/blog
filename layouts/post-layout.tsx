@@ -5,7 +5,6 @@ import Comments from '@/components/comments'
 import Link from '@/components/link'
 import PageTitle from '@/components/page-title'
 import SectionContainer from '@/components/section-container'
-import Image from '@/components/image'
 import Tag from '@/components/tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/scroll-top-and-comment'
@@ -82,7 +81,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     <h2 className="text-xs uppercase tracking-wide text-secondary-500 dark:text-gray-400">
                       Tags
                     </h2>
-                    <div className="flex flex-wrap">
+                    <div className="my-2 flex flex-wrap">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />
                       ))}
