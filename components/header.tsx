@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between py-10">
-      <div className="flex items-center">
+      <div className="flex items-center gap-3">
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             {typeof siteMetadata.headerTitle === 'string' ? (
@@ -27,8 +27,8 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      <SearchButton />
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+        <SearchButton />
         {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (

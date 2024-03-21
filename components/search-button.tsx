@@ -12,7 +12,7 @@ const SearchButton = () => {
 
     return (
       <SearchButtonWrapper aria-label="Search">
-        <div className="flex items-center rounded border border-gray-300 px-2 py-1 dark:bg-gray-700">
+        <div className="flex items-center rounded-2xl bg-gray-50 px-2 py-1  dark:bg-gray-700">
           <i>
             <svg
               xmlns="http://www.w3.org/2000/svg"
