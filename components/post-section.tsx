@@ -17,7 +17,7 @@ export default function PostSection(props: PostSectionProps) {
         Latest Posts
       </h1>
 
-      <hr className="my-2 border-t-gray-600" />
+      <hr className="my-2 border-t-gray-200 dark:border-t-gray-600" />
       <ul className="">
         {!posts.length && 'No posts found.'}
         {posts.slice(0, MAX_DISPLAY).map((post) => {
