@@ -24,8 +24,8 @@ interface LayoutProps {
   children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags } = content
+export default function PostLayout({ content, next, prev, children }: LayoutProps) {
+  const { path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
 
   return (
@@ -45,10 +45,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 </Link>
               </div>
               <div>
-                <PageTitle>
-                  <span className="font-thin text-gray-900">[</span> {title}{' '}
-                  <span className="font-thin text-gray-900">]</span>
-                </PageTitle>
+                <PageTitle>{title} </PageTitle>
               </div>
               <dl className="space-y-10">
                 <div>
