@@ -35,7 +35,7 @@ const Header = () => {
               key={link.title}
               href={link.href}
               className={clsx(
-                'hidden font-medium text-gray-900 hover:text-accent-500 dark:text-gray-600 hover:dark:text-accent-500 sm:block',
+                'hidden font-medium text-gray-900 hover:text-accent-500 dark:text-gray-100 hover:dark:text-accent-500 sm:block',
                 {
                   'text-accent-500 dark:text-accent-500': pathName.includes(link.href),
                 }

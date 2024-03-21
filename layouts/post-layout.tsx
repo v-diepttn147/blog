@@ -46,14 +46,14 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </div>
               <div>
                 <PageTitle>
-                  <span className="font-thin text-gray-700">[</span> {title}{' '}
-                  <span className="font-thin text-gray-700">]</span>
+                  <span className="font-thin text-gray-900">[</span> {title}{' '}
+                  <span className="font-thin text-gray-900">]</span>
                 </PageTitle>
               </div>
               <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="font-small text-base leading-6 text-gray-900 dark:text-gray-700">
+                  <dd className="font-small text-base leading-6 text-gray-900 dark:text-gray-900">
                     <time dateTime={date} className="text-gray-900 dark:text-gray-500">
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
@@ -67,7 +67,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
               {siteMetadata.comments && (
                 <div
-                  className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300"
+                  className="pb-6 pt-6 text-center text-gray-900 dark:text-gray-100"
                   id="comment"
                 >
                   <Comments slug={slug} />
@@ -78,7 +78,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
                   <div className="py-4 xl:py-8">
-                    <h2 className="text-xs uppercase tracking-wide text-gray-900 dark:text-gray-400">
+                    <h2 className="text-xs uppercase tracking-wide text-gray-900 dark:text-gray-100">
                       Tags
                     </h2>
                     <div className="my-2 flex flex-wrap">
@@ -92,7 +92,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
                     {prev && prev.path && (
                       <div>
-                        <h2 className="text-xs uppercase tracking-wide text-gray-900 dark:text-gray-400">
+                        <h2 className="text-xs uppercase tracking-wide text-gray-900 dark:text-gray-100">
                           Previous Article
                         </h2>
                         <div className="text-accent-500 hover:text-accent-600 dark:hover:text-accent-400">
@@ -102,7 +102,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     )}
                     {next && next.path && (
                       <div>
-                        <h2 className="text-xs uppercase tracking-wide text-gray-900 dark:text-gray-400">
+                        <h2 className="text-xs uppercase tracking-wide text-gray-900 dark:text-gray-100">
                           Next Article
                         </h2>
                         <div className="text-accent-500 hover:text-accent-600 dark:hover:text-accent-400">

@@ -90,7 +90,7 @@ export default function ListLayoutWithTags({
               ) : (
                 <Link
                   href={`/blog`}
-                  className="font-bold uppercase text-gray-700 hover:text-accent-500 dark:text-gray-300 dark:hover:text-accent-500"
+                  className="font-bold uppercase text-gray-900 hover:text-accent-500 dark:text-gray-100 dark:hover:text-accent-500"
                 >
                   All Posts
                 </Link>
@@ -106,7 +106,7 @@ export default function ListLayoutWithTags({
                       ) : (
                         <Link
                           href={`/tags/${slug(t)}`}
-                          className="px-3 py-2 text-sm font-medium uppercase text-gray-900 hover:text-accent-500 dark:text-gray-300 dark:hover:text-accent-500"
+                          className="px-3 py-2 text-sm font-medium uppercase text-gray-900 hover:text-accent-500 dark:text-gray-100 dark:hover:text-accent-500"
                           aria-label={`View posts tagged ${t}`}
                         >
                           {`${t} (${tagCounts[t]})`}
@@ -139,12 +139,12 @@ export default function ListLayoutWithTags({
                           </div>
                           <dl>
                             <dt className="sr-only">Published on</dt>
-                            <dd className="text-base font-medium leading-6 text-gray-900 dark:text-gray-400">
+                            <dd className="text-base font-medium leading-6 text-gray-900 dark:text-gray-100">
                               <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                             </dd>
                           </dl>
                         </div>
-                        <div className="prose max-w-none text-gray-900 dark:text-gray-400">
+                        <div className="prose max-w-none text-gray-900 dark:text-gray-100">
                           {summary}
                         </div>
                       </div>

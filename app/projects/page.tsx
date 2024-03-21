@@ -10,7 +10,7 @@ export default function Projects() {
           <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl">
             Projects
           </h1>
-          <p className="text-lg leading-7 text-gray-900 dark:text-gray-400">
+          <p className="text-lg leading-7 text-gray-900 dark:text-gray-100">
             These are some of the projects I've worked on.
           </p>
         </div>
