@@ -12,9 +12,9 @@ export default function PostSection(props: PostSectionProps) {
   const { posts } = props
 
   return (
-    <div className="">
+    <div className="mt-12">
       <h1 className="md:leading-14 text-xl font-bold tracking-tight  text-secondary-500 dark:text-gray-100 sm:leading-10 md:text-3xl">
-        Posts
+        Latest Posts
       </h1>
 
       <hr className="my-2 border-t-gray-600" />

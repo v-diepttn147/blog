@@ -15,7 +15,7 @@ export default function PostCard(props: PostProps) {
   return (
     <Link
       href={`/blog/${slug}`}
-      className="group block w-full max-w-[544px] cursor-pointer rounded-md p-2"
+      className="group block w-full max-w-[544px] cursor-pointer rounded-md p-2 pl-0"
     >
       <h2 className="mt-2 text-2xl font-bold text-secondary-500 group-hover:text-primary-500 dark:text-gray-50">
         {title}
