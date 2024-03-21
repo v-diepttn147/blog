@@ -18,7 +18,7 @@ const Header = () => {
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold text-secondary-500 dark:text-white sm:block">
+              <div className="hidden h-6 text-2xl font-semibold text-gray-900 dark:text-white sm:block">
                 {siteMetadata.headerTitle}
               </div>
             ) : (
@@ -35,9 +35,9 @@ const Header = () => {
               key={link.title}
               href={link.href}
               className={clsx(
-                'hidden font-medium text-gray-900 hover:text-primary-500 dark:text-gray-600 hover:dark:text-primary-500 sm:block',
+                'hidden font-medium text-gray-900 hover:text-accent-500 dark:text-gray-600 hover:dark:text-accent-500 sm:block',
                 {
-                  'text-primary-500 dark:text-primary-500': pathName.includes(link.href),
+                  'text-accent-500 dark:text-accent-500': pathName.includes(link.href),
                 }
               )}
             >

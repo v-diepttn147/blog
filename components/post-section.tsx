@@ -13,7 +13,7 @@ export default function PostSection(props: PostSectionProps) {
 
   return (
     <div className="mt-12">
-      <h1 className="md:leading-14 text-xl font-bold tracking-tight  text-secondary-500 dark:text-gray-100 sm:leading-10 md:text-3xl">
+      <h1 className="md:leading-14 text-xl font-bold tracking-tight  text-gray-900 dark:text-gray-100 sm:leading-10 md:text-3xl">
         Latest Posts
       </h1>
 
@@ -28,7 +28,7 @@ export default function PostSection(props: PostSectionProps) {
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            className="text-accent-500 hover:text-accent-600 dark:hover:text-accent-400"
             aria-label="All posts"
           >
             All Posts &rarr;

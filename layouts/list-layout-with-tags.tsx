@@ -83,14 +83,14 @@ export default function ListLayoutWithTags({
           </h1>
         </div>
         <div className="flex sm:space-x-24">
-          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto border border-secondary-500 bg-transparent pt-5 dark:border-white sm:flex">
+          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto border border-gray-800 bg-transparent pt-5 dark:border-white sm:flex">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
-                <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
+                <h3 className="font-bold uppercase text-accent-500">All Posts</h3>
               ) : (
                 <Link
                   href={`/blog`}
-                  className="font-bold uppercase text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
+                  className="font-bold uppercase text-gray-700 hover:text-accent-500 dark:text-gray-300 dark:hover:text-accent-500"
                 >
                   All Posts
                 </Link>
@@ -100,13 +100,13 @@ export default function ListLayoutWithTags({
                   return (
                     <li key={t} className="my-3">
                       {pathname.split('/tags/')[1] === slug(t) ? (
-                        <h3 className="inline px-3 py-2 text-sm font-bold uppercase text-primary-500">
+                        <h3 className="inline px-3 py-2 text-sm font-bold uppercase text-accent-500">
                           {`${t} (${tagCounts[t]})`}
                         </h3>
                       ) : (
                         <Link
                           href={`/tags/${slug(t)}`}
-                          className="px-3 py-2 text-sm font-medium uppercase text-secondary-500 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
+                          className="px-3 py-2 text-sm font-medium uppercase text-gray-900 hover:text-accent-500 dark:text-gray-300 dark:hover:text-accent-500"
                           aria-label={`View posts tagged ${t}`}
                         >
                           {`${t} (${tagCounts[t]})`}
@@ -123,12 +123,12 @@ export default function ListLayoutWithTags({
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post
                 return (
-                  <li key={path} className="py-5">
+                  <li key={path} className="pb-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <div className="space-y-3">
                         <div className="flex justify-between">
                           <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                            <h2 className="mb-2 text-2xl font-bold leading-8 tracking-tight">
                               <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
                                 {title}
                               </Link>
@@ -139,12 +139,12 @@ export default function ListLayoutWithTags({
                           </div>
                           <dl>
                             <dt className="sr-only">Published on</dt>
-                            <dd className="text-base font-medium leading-6 text-secondary-500 dark:text-gray-400">
+                            <dd className="text-base font-medium leading-6 text-gray-900 dark:text-gray-400">
                               <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                             </dd>
                           </dl>
                         </div>
-                        <div className="prose max-w-none text-secondary-500 dark:text-gray-400">
+                        <div className="prose max-w-none text-gray-900 dark:text-gray-400">
                           {summary}
                         </div>
                       </div>

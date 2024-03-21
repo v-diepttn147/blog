@@ -3,8 +3,8 @@ import Image from 'next/image'
 export default function HeroImage() {
   return (
     <div className="relative flex h-[350px] w-[350px] items-center justify-center">
-      <div className="h-[250px] w-[250px] rotate-45 border-[2px] border-primary-500 bg-transparent"></div>
-      <div className="absolute top-[30px] h-[250px] w-[250px] rotate-45 border-[2px] border-secondary-500 bg-transparent dark:border-white"></div>
+      <div className="h-[250px] w-[250px] rotate-45 border-[2px] border-accent-500 bg-transparent"></div>
+      <div className="absolute top-[30px] h-[250px] w-[250px] rotate-45 border-[2px] border-gray-800 bg-transparent dark:border-white"></div>
       <Image
         src="/static/images/hero.png"
         width={300}
