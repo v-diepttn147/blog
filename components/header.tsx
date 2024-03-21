@@ -14,19 +14,20 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between py-10">
-      <div>
+      <div className="flex items-center">
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold text-gray-900 dark:text-white sm:block">
+              <p className="hidden text-2xl font-semibold text-gray-900 dark:text-white sm:block">
                 {siteMetadata.headerTitle}
-              </div>
+              </p>
             ) : (
               siteMetadata.headerTitle
             )}
           </div>
         </Link>
       </div>
+      <SearchButton />
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
         {headerNavLinks
           .filter((link) => link.href !== '/')
@@ -44,7 +45,6 @@ const Header = () => {
               / {link.title}
             </Link>
           ))}
-        <SearchButton />
         <ThemeSwitch />
         <MobileNav />
       </div>
