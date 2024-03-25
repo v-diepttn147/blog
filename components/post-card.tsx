@@ -15,7 +15,7 @@ export default function PostCard(props: PostProps) {
   return (
     <Link
       href={`/blog/${slug}`}
-      className="group block w-full max-w-[544px] cursor-pointer rounded-md p-2 pl-0"
+      className="group flex w-full max-w-[544px] cursor-pointer flex-col rounded-md bg-gray-50 p-4 dark:bg-gray-700"
     >
       <h2 className="mt-2 text-2xl font-bold text-gray-900 group-hover:text-accent-500 dark:text-gray-50">
         {title}
@@ -23,7 +23,7 @@ export default function PostCard(props: PostProps) {
       <time className="text-gray-500 dark:text-gray-300" dateTime={date}>
         {formatDate(date, siteMetadata.locale)}
       </time>
-      <p className="my-2 text-gray-900 dark:text-gray-100">{summary}</p>
+      <p className="my-2 block flex-grow text-gray-900 dark:text-gray-100">{summary}</p>
       <div className="flex flex-wrap">
         {tags.map((tag) => (
           <Tag key={tag} text={tag} />
