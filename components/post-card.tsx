@@ -1,7 +1,6 @@
 import siteMetadata from '@/data/siteMetadata'
 import Post from '@/interfaces/Post'
 import Link from 'next/link'
-import { formatDate } from 'pliny/utils/formatDate'
 import React from 'react'
 import Tag from './tag'
 interface PostProps {
@@ -12,6 +11,9 @@ export default function PostCard(props: PostProps) {
   const { post } = props
   const { slug, date, title, summary, tags } = post
 
+  const dateMonth = new Date(date).getMonth()
+  const dateYear = new Date(date).getFullYear()
+
   return (
     <Link
       href={`/blog/${slug}`}
@@ -20,10 +22,10 @@ export default function PostCard(props: PostProps) {
       <h2 className="mt-2 text-2xl font-bold text-gray-900 group-hover:text-accent-500 dark:text-gray-50">
         {title}
       </h2>
-      <time className="text-gray-500 dark:text-gray-300" dateTime={date}>
-        {formatDate(date, siteMetadata.locale)}
+      <time className="text-accent-400" dateTime={date}>
+        {dateMonth + 1} {dateYear}
       </time>
-      <p className="my-2 block flex-grow text-gray-900 dark:text-gray-100">{summary}</p>
+      <p className="my-2 block flex-grow text-gray-900 dark:text-gray-300">{summary}</p>
       <div className="flex flex-wrap">
         {tags.map((tag) => (
           <Tag key={tag} text={tag} />

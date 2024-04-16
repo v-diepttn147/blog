@@ -4,8 +4,8 @@ const projectsData = [
     description: `A simple and flexible stacked toast library for React. It's easy to use and
     customizable. 
     `,
-    imgSrc: '/static/images/react-stacked-toast.png',
     href: 'https://react-stacked-toast.vercel.app',
+    year: 2023,
   },
 ]
 
