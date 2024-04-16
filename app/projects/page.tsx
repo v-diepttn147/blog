@@ -19,6 +19,7 @@ export default function Projects() {
               <Card
                 key={d.title}
                 title={d.title}
+                repo={d.repo}
                 description={d.description}
                 year={d.year}
                 href={d.href}

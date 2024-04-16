@@ -1,8 +1,8 @@
 import Link from './link'
 
-const Card = async ({ title, description, href, year }) => {
+const Card = async ({ title, description, href, year, repo }) => {
   const { stargazers_count: numOfStars } = await (
-    await fetch(`https://api.github.com/repos/nhanluongoe/react-stacked-toast`, {
+    await fetch(`https://api.github.com/repos/nhanluongoe/${repo}`, {
       next: { revalidate: 60 * 60 }, // revalidate every 1 hour
     })
   ).json()

@@ -1,6 +1,7 @@
 const projectsData = [
   {
     title: 'react-stacked-toast',
+    repo: 'react-stacked-toast',
     description: `A simple and flexible stacked toast library for React. It's easy to use and
     customizable. 
     `,
