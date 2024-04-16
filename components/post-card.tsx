@@ -1,8 +1,10 @@
-import siteMetadata from '@/data/siteMetadata'
-import Post from '@/interfaces/Post'
 import Link from 'next/link'
-import React from 'react'
+
+import Post from '@/interfaces/Post'
+import { dateToMonthYear } from '@/utils/format'
+
 import Tag from './tag'
+
 interface PostProps {
   post: Post
 }
@@ -11,21 +13,18 @@ export default function PostCard(props: PostProps) {
   const { post } = props
   const { slug, date, title, summary, tags } = post
 
-  const dateMonth = new Date(date).getMonth()
-  const dateYear = new Date(date).getFullYear()
-
   return (
     <Link
       href={`/blog/${slug}`}
-      className="group flex w-full max-w-[544px] cursor-pointer flex-col rounded-md bg-gray-50 p-4 dark:bg-gray-700"
+      className="group flex w-full max-w-[544px] cursor-pointer flex-col rounded-md border border-gray-200 border-opacity-60 bg-gray-50 p-4 dark:border-gray-900 dark:bg-gray-950"
     >
       <h2 className="mt-2 text-2xl font-bold text-gray-900 group-hover:text-accent-500 dark:text-gray-50">
         {title}
       </h2>
-      <time className="text-accent-400" dateTime={date}>
-        {dateMonth + 1} {dateYear}
+      <time className="text-sm text-accent-400" dateTime={date}>
+        {dateToMonthYear(date)}
       </time>
-      <p className="my-2 block flex-grow text-gray-900 dark:text-gray-300">{summary}</p>
+      <p className="my-2 block flex-grow text-gray-900 dark:text-gray-200">{summary}</p>
       <div className="flex flex-wrap">
         {tags.map((tag) => (
           <Tag key={tag} text={tag} />

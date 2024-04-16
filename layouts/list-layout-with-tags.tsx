@@ -1,14 +1,13 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
-import { slug } from 'github-slugger'
-import { formatDate } from 'pliny/utils/formatDate'
-import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/link'
 import Tag from '@/components/tag'
-import siteMetadata from '@/data/siteMetadata'
+import { dateToMonthYear } from '@/utils/format'
 import tagData from 'app/tag-data.json'
+import type { Blog } from 'contentlayer/generated'
+import { slug } from 'github-slugger'
+import { usePathname } from 'next/navigation'
+import { CoreContent } from 'pliny/utils/contentlayer'
 
 interface PaginationProps {
   totalPages: number
@@ -83,7 +82,7 @@ export default function ListLayoutWithTags({
           </h1>
         </div>
         <div className="flex sm:space-x-24">
-          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto border-r border-r-gray-200 bg-transparent pt-5 dark:border-gray-500 sm:flex">
+          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto bg-transparent pt-5 sm:flex">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
                 <h3 className="font-bold uppercase text-accent-500">All Posts</h3>
@@ -119,11 +118,11 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <ul>
+            <ul className="divide-y divide-gray-400 dark:divide-gray-800">
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post
                 return (
-                  <li key={path} className="pb-5">
+                  <li key={path} className="py-2">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <div className="space-y-3">
                         <div className="flex justify-between">
@@ -140,11 +139,13 @@ export default function ListLayoutWithTags({
                           <dl>
                             <dt className="sr-only">Published on</dt>
                             <dd className="text-base font-medium leading-6 text-gray-900 dark:text-gray-100">
-                              <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                              <time dateTime={date} className="text-sm text-accent-400">
+                                {dateToMonthYear(date)}
+                              </time>
                             </dd>
                           </dl>
                         </div>
-                        <div className="prose max-w-none text-gray-900 dark:text-gray-100">
+                        <div className="prose max-w-none text-gray-900 dark:text-gray-300">
                           {summary}
                         </div>
                       </div>

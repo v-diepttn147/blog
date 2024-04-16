@@ -11,7 +11,9 @@ const Card = async ({ title, description, href, year }) => {
         <div className="p-3">
           <div className="flex justify-between pb-2">
             <div className="text-accent-500">{year}</div>
-            <div>{numOfStars} ⭐️</div>
+            <div>
+              <span className="text-gray-900 dark:text-gray-300">{numOfStars}</span> ⭐️
+            </div>
           </div>
           <h2 className="mb-2 text-2xl font-bold leading-5 tracking-tight">
             {href ? (
@@ -22,7 +24,7 @@ const Card = async ({ title, description, href, year }) => {
               title
             )}
           </h2>
-          <p className="prose mb-3 max-w-none text-gray-900 dark:text-gray-400">{description}</p>
+          <p className="prose mb-3 max-w-none text-gray-900 dark:text-gray-300">{description}</p>
           {href && (
             <Link
               href={href}
