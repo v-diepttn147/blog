@@ -21,10 +21,10 @@ export default function PostCard(props: PostProps) {
       <h2 className="mt-2 text-2xl font-bold text-gray-900 group-hover:text-accent-500 dark:text-gray-50">
         {title}
       </h2>
-      <time className="text-sm text-accent-400" dateTime={date}>
+      <time className="text-sm text-accent-700 dark:text-accent-400" dateTime={date}>
         {dateToMonthYear(date)}
       </time>
-      <p className="my-2 block flex-grow text-gray-900 dark:text-gray-200">{summary}</p>
+      <p className="my-2 block flex-grow text-gray-600 dark:text-gray-300">{summary}</p>
       <div className="flex flex-wrap">
         {tags.map((tag) => (
           <Tag key={tag} text={tag} />

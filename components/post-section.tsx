@@ -13,11 +13,10 @@ export default function PostSection(props: PostSectionProps) {
 
   return (
     <div className="mt-12">
-      <h1 className="md:leading-14 pl-2 text-xl font-bold tracking-tight  text-gray-900 dark:text-gray-100 sm:leading-10 md:text-3xl">
+      <h1 className="md:leading-14 pb-3 pl-2 text-xl font-bold  tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:text-3xl">
         Latest Posts
       </h1>
 
-      <hr className="my-4 border-t-gray-200 dark:border-t-gray-600" />
       <ul className="grid grid-cols-1 md:grid-cols-2 md:gap-3">
         {!posts.length && 'No posts found.'}
         {posts.slice(0, MAX_DISPLAY).map((post) => {
