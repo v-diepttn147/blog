@@ -2,7 +2,7 @@
 title: 'Hide your 3rd-party libraries behind your own API'
 date: '2024-04-17'
 tags: ['best practice']
-draft: true
+draft: false
 summary: 'How to wrap 3rd-party libraries in your own API to make your codebase more maintainable.'
 ---
 
@@ -14,7 +14,7 @@ Let's see how you can do this with an example.
 
 Suppose you are using Axios as a 3rd-party library to make HTTP requests in your application. You can wrap Axios in your own API like this (eg. `httpClient.js`):
 
-```js filename"httpClient.js"
+```js
 // httpClient.js
 import axios form 'axios';
 
@@ -31,7 +31,7 @@ export async function post(url, data) {
 
 And you use this API in your application like this:
 
-```js filename="main.js"
+```js
 // main.js
 import { get, post } from './httpClient'
 
