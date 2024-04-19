@@ -1,17 +1,44 @@
 'use client'
 
-import { Comments as CommentsComponent } from 'pliny/comments'
-import { useState } from 'react'
-import siteMetadata from '@/data/siteMetadata'
+import { useTheme } from 'next-themes'
+import { useEffect, useRef } from 'react'
 
-export default function Comments({ slug }: { slug: string }) {
-  const [loadComments, setLoadComments] = useState(false)
+export default function Comments() {
+  const ref = useRef<HTMLDivElement>(null)
+
+  const { theme } = useTheme()
+
+  useEffect(() => {
+    const script = document.createElement('script')
+
+    const config = {
+      src: 'https://utteranc.es/client.js',
+      repo: 'nhanluongoe/blog',
+      'issue-term': 'pathname',
+      theme: theme === 'light' ? 'github-light' : 'github-dark',
+      crossOrigin: 'anonymous',
+      defer: 'true',
+    }
+
+    Object.entries(config).forEach(([key, value]) => {
+      script.setAttribute(key, value)
+    })
+
+    if (ref.current) {
+      ref.current.append(script)
+    }
+
+    return () => {
+      if (ref.current) {
+        ref.current.innerHTML = ''
+      }
+    }
+  }, [theme])
+
   return (
-    <>
-      {!loadComments && <button onClick={() => setLoadComments(true)}>Load Comments</button>}
-      {siteMetadata.comments && loadComments && (
-        <CommentsComponent commentsConfig={siteMetadata.comments} slug={slug} />
-      )}
-    </>
+    <div>
+      <h2 className="text-3xl">Comments</h2>
+      <div ref={ref} />
+    </div>
   )
 }
