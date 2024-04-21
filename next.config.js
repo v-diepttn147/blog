@@ -92,8 +92,6 @@ module.exports = () => {
         use: ['@svgr/webpack'],
       })
 
-      config.output = 'export'
-
       return config
     },
   })
