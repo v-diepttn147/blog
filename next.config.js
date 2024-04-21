@@ -94,7 +94,7 @@ module.exports = () => {
 
       return config
     },
-    // Add the output property here
+    basePath: '/blog',
     output: 'export',
   })
 }
