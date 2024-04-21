@@ -3,11 +3,11 @@ const siteMetadata = {
   title: 'Nhan Luong',
   author: 'Nhan Luong',
   headerTitle: 'Nhan Luong',
-  description: 'Just build it',
+  description: 'Thoughts and logs of a software engineer',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://nhanluongoe.me',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteRepo: 'https://github.com/nhanluongoe/blog',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
