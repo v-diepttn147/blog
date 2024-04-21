@@ -87,6 +87,13 @@ module.exports = () => {
         use: ['@svgr/webpack'],
       })
 
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      })
+
+      config.output = 'export'
+
       return config
     },
   })
