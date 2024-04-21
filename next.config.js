@@ -60,6 +60,8 @@ const securityHeaders = [
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
+    basePath: '/blog',
+    output: 'export',
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
@@ -72,6 +74,7 @@ module.exports = () => {
           hostname: 'picsum.photos',
         },
       ],
+      unoptimized: true,
     },
     async headers() {
       return [
@@ -94,7 +97,5 @@ module.exports = () => {
 
       return config
     },
-    basePath: '/blog',
-    output: 'export',
   })
 }
