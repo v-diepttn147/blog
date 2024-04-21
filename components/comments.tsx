@@ -1,5 +1,6 @@
 'use client'
 
+import siteMetadata from '@/data/siteMetadata'
 import { useTheme } from 'next-themes'
 import { useEffect, useRef } from 'react'
 
@@ -13,7 +14,7 @@ export default function Comments() {
 
     const config = {
       src: 'https://utteranc.es/client.js',
-      repo: 'nhanluongoe/blog',
+      repo: siteMetadata.utterances,
       'issue-term': 'pathname',
       theme: theme === 'light' ? 'github-light' : 'github-dark',
       crossOrigin: 'anonymous',

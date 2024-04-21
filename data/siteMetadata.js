@@ -21,6 +21,7 @@ const siteMetadata = {
       searchDocumentsPath: 'search.json', // path to load documents to search
     },
   },
+  utterances: 'nhanluongoe/blog', // Github repository for Utterances
 }
 
 module.exports = siteMetadata
