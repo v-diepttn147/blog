@@ -1,19 +1,16 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Nhan Luong',
-  author: 'Nhan Luong',
-  headerTitle: 'Nhan Luong',
-  description: 'Thoughts and logs of a software engineer',
+  title: 'Diep Tran',
+  author: 'Diep Tran',
+  headerTitle: 'Diep Tran',
+  description: 'Thoughts and logs of an AI Engineer',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://nhanluongoe.me',
-  siteRepo: 'https://github.com/nhanluongoe/blog',
-  siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'nhanlt18@gmail.com',
-  github: 'https://github.com/nhanluongoe',
-  linkedin: 'https://www.linkedin.com/nhanlt18',
+  siteUrl: 'https://dieptran.dev',
+  siteRepo: 'https://github.com/v-diepttn147/blog',
+  email: 'diepttn147@gmail.com',
+  github: 'https://github.com/v-diepttn147',
+  linkedin: 'https://www.linkedin.com/diep-tran-1407',
   locale: 'en-US',
   search: {
     provider: 'kbar', // kbar or algolia
@@ -21,7 +18,7 @@ const siteMetadata = {
       searchDocumentsPath: 'search.json', // path to load documents to search
     },
   },
-  utterances: 'nhanluongoe/blog', // Github repository for Utterances
+  utterances: 'v-diepttn147/blog', // Github repository for Utterances
 }
 
 module.exports = siteMetadata

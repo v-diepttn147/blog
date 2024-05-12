@@ -2,7 +2,7 @@ import Link from './link'
 
 const Card = async ({ title, description, href, year, repo }) => {
   const { stargazers_count: numOfStars } = await (
-    await fetch(`https://api.github.com/repos/nhanluongoe/${repo}`, {
+    await fetch(`https://api.github.com/repos/v-diepttn147/${repo}`, {
       next: { revalidate: 60 * 60 }, // revalidate every 1 hour
     })
   ).json()
