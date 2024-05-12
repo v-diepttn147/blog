@@ -1,21 +1,12 @@
 import Link from './link'
 
 const Card = async ({ title, description, href, year, repo }) => {
-  const { stargazers_count: numOfStars } = await (
-    await fetch(`https://api.github.com/repos/v-diepttn147/${repo}`, {
-      next: { revalidate: 60 * 60 }, // revalidate every 1 hour
-    })
-  ).json()
-
   return (
     <div className="md max-w-[544px] p-4 md:w-1/2">
       <div className="overflow-hidden rounded-md border border-gray-200 border-opacity-60 bg-gray-50 dark:border-gray-900 dark:bg-gray-950">
         <div className="p-3">
           <div className="flex justify-between pb-2">
             <div className="text-accent-500">{year}</div>
-            <div>
-              <span className="text-gray-900 dark:text-gray-300">{numOfStars}</span> ⭐️
-            </div>
           </div>
           <h2 className="mb-2 text-2xl font-bold leading-5 tracking-tight">
             {href ? (
