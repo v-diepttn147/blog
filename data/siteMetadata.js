@@ -11,7 +11,7 @@ const siteMetadata = {
   socialBanner: '/static/images/logo.png',
   email: 'diepttn147@gmail.com',
   github: 'https://github.com/v-diepttn147',
-  linkedin: 'https://www.linkedin.com/diep-tran-1407',
+  linkedin: 'https://www.linkedin.com/in/diep-tran-1407',
   locale: 'en-US',
   search: {
     provider: 'kbar', // kbar or algolia
