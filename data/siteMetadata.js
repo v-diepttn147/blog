@@ -8,6 +8,7 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://dieptran.dev',
   siteRepo: 'https://github.com/v-diepttn147/blog',
+  socialBanner: '/static/images/logo.png',
   email: 'diepttn147@gmail.com',
   github: 'https://github.com/v-diepttn147',
   linkedin: 'https://www.linkedin.com/diep-tran-1407',
