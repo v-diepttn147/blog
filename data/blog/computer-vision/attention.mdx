@@ -1,0 +1,32 @@
+---
+title: 'Simple Attention Model and How It Works'
+date: '2024-02-04'
+tags: ['computer-vision', 'deep-learning', 'natural-language-processing']
+draft: true
+summary: 'You are new to attention and so I am! Here is a simple explanation with code, let us re-implement the attention model and deal with shape and size!'
+---
+
+# Why Attention?
+
+Processing sequence data requires focusing on some particular part of the sequence. 
+
+Suppose we have the English sentence: `The cat is sitting on the mat.` and we want to translate it to French, which is `Le chat est assis sur le tapis.`.
+
+Now, when the neural network is translating this sentence, at each step of generating the translated output sequence, it may need to focus on different parts of the input English sentence.
+
+For instance, when the model is translating "Le chat," it might need to focus more on "The cat" to understand the subject of the sentence. Then, when it's translating "est assis," it might focus more on "is sitting" to capture the verb tense and action. Similarly, when translating "sur le tapis," it would likely focus on "on the mat" to capture the prepositional phrase.
+
+The attention mechanism allows the model to assign different weights to each word in the input sequence based on its relevance to the current output word being generated. So, during the translation process, the model dynamically adjusts its focus on different parts of the input sequence as needed, allowing for more accurate translations.
+
+# From RNN to Attention
+
+## RNN unit
+Recurrent Neural Networks (RNN) have been used in sequence data tasks because they have `memory`. Each timestamp `t`, they read the part `t` of the input and remember the information using the hidden layer activations. The context from the past will be used to process later inputs in the original RNN, and affects both sides (past and future) in birectional RNN.
+
+## GRU unit
+
+## LSTM cell
+
+## Attention
+
+# Conclusions
